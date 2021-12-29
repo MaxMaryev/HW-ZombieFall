@@ -2,17 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ZombieController : MonoBehaviour
+public class Zombie : MonoBehaviour
 {
     [SerializeField] private Transform _attractionPoint;
+
     private float _speed = 1;
     private bool _isFalling = false;
+    private Animator _animator;
 
-    void Update()
+    private void Start()
+    {
+        _animator = GetComponent<Animator>();
+    }
+
+    private void Update()
     {
         if (_isFalling == false)
         {
-            gameObject.GetComponent<Animator>().SetFloat("Speed", _speed);
+            _animator.SetFloat("Speed", _speed);
             Vector3 direction = (_attractionPoint.position - transform.position);
 
             transform.rotation = Quaternion.LookRotation(direction, Vector3.up);
@@ -22,8 +29,11 @@ public class ZombieController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        const string AnimatorSpeed = "Speed";
+        const string AnimatorIsFall = "isFall";
+
         _isFalling = true;
-        gameObject.GetComponent<Animator>().SetFloat("Speed", 0);
-        gameObject.GetComponent<Animator>().SetBool("isFall", true);
+        _animator.SetFloat(AnimatorSpeed, 0);
+        _animator.SetBool(AnimatorIsFall, true);
     }
 }

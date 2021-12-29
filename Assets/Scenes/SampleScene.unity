@@ -458,9 +458,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7bdea3aa8270242bd8c7f8a4c01d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _zombie: {fileID: 4493914613880827488, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
-  _spawn: {fileID: 829729337}
-  _attractionPoint: {fileID: 1327409113}
+  _zombie: {fileID: -2323510299148774690, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
+  _spawnPoints: {fileID: 829729337}
+  _attractionPoint: {fileID: 0}
 --- !u!4 &829729337
 Transform:
   m_ObjectHideFlags: 0
@@ -633,11 +633,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3931451205697452868, guid: d074ff1386fb56c43869dc6a18f31d33, type: 3}
   m_PrefabInstance: {fileID: 3931451206789897372}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1327409113 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3931451205697452869, guid: d074ff1386fb56c43869dc6a18f31d33, type: 3}
-  m_PrefabInstance: {fileID: 3931451206789897372}
-  m_PrefabAsset: {fileID: 0}
 --- !u!135 &1327409114
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -649,8 +644,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 29.648445
-  m_Center: {x: 0, y: -31.38015, z: 0}
+  m_Radius: 19.699606
+  m_Center: {x: 0, y: -1.9179897, z: 0}
 --- !u!1 &1496676712
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,7 +787,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3931451205697452869, guid: d074ff1386fb56c43869dc6a18f31d33, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 51.7
+      value: 30.2
       objectReference: {fileID: 0}
     - target: {fileID: 3931451205697452869, guid: d074ff1386fb56c43869dc6a18f31d33, type: 3}
       propertyPath: m_LocalPosition.z
