@@ -5,8 +5,9 @@ using UnityEngine;
 public class SpawnEnemies : MonoBehaviour
 {
     [SerializeField] private Zombie _zombie;
-    [SerializeField] private Transform _spawnPoints;
-    [SerializeField] private Transform _attractionPoint;
+    [SerializeField] private Transform _spawnPointsParent;
+    [SerializeField] private int _zombiesCount;
+    [SerializeField] private int _instantiateDelay;
 
     private void Start()
     {
@@ -15,14 +16,11 @@ public class SpawnEnemies : MonoBehaviour
 
     private IEnumerator SpawnZombies()
     {
-        bool isSpawning = true;
-        int instantiateDelay = 2;
-
-        while (isSpawning)
+        for (int i = 0; i < _zombiesCount; i++)
         {
-            Instantiate(_zombie, _spawnPoints.GetChild(Random.Range(0, _spawnPoints.childCount)).position, Quaternion.identity);
+            Instantiate(_zombie, _spawnPointsParent.GetChild(Random.Range(0, _spawnPointsParent.childCount)).position, Quaternion.identity);
 
-            yield return new WaitForSeconds(instantiateDelay);
+            yield return new WaitForSeconds(_instantiateDelay);
         }
     }
 }

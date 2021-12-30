@@ -459,8 +459,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _zombie: {fileID: -2323510299148774690, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
-  _spawnPoints: {fileID: 829729337}
-  _attractionPoint: {fileID: 0}
+  _spawnPointsParent: {fileID: 829729337}
+  _zombiesCount: 22
+  _instantiateDelay: 2
 --- !u!4 &829729337
 Transform:
   m_ObjectHideFlags: 0
@@ -775,7 +776,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3931451205697452868, guid: d074ff1386fb56c43869dc6a18f31d33, type: 3}
       propertyPath: m_Name
-      value: AttractionPoint
+      value: MovePoint
       objectReference: {fileID: 0}
     - target: {fileID: 3931451205697452869, guid: d074ff1386fb56c43869dc6a18f31d33, type: 3}
       propertyPath: m_RootOrder

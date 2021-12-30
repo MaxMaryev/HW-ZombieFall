@@ -1745,7 +1745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb42ca20bcd15a4cbc09dd8596ed0ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attractionPoint: {fileID: 3931451205697452869, guid: d074ff1386fb56c43869dc6a18f31d33, type: 3}
+  _movePoint: {fileID: 3931451205697452869, guid: d074ff1386fb56c43869dc6a18f31d33, type: 3}
 --- !u!54 &-1567157548597415548
 Rigidbody:
   m_ObjectHideFlags: 0
